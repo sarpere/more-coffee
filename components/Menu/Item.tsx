@@ -87,13 +87,14 @@ const Item = ({ item }: { item: menuTypes.menuItem }) => {
           <Image>
             <Typography
               component="span"
-              variant="subtitle1"
+              variant="h5"
               color="inherit"
               sx={{
                 position: "relative",
                 p: 4,
                 pt: 2,
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                fontWeight: "bold",
               }}
             >
               {item.name}

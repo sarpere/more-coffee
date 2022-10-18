@@ -8,3 +8,7 @@ export type categoryList = {
   name: string;
   price: string;
 };
+export type category = {
+  data: categoryList[];
+  category: menuItem;
+};
