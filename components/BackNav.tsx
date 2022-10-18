@@ -29,6 +29,12 @@ const DropShadow = styled("div")({
     0
   )} 50%)`,
 });
+const CustomLink = styled("a")({
+  // position: "absolute",
+  // left: 0,
+  // top: 30,
+  // zIndex: 1,
+});
 
 const BackNav = ({ src, alt }: Props) => {
   return (
@@ -38,6 +44,7 @@ const BackNav = ({ src, alt }: Props) => {
       overflow="hidden"
       height={75}
       alignItems="center"
+      position={"relative"}
     >
       <Link href="/">
         <a>
@@ -51,7 +58,7 @@ const BackNav = ({ src, alt }: Props) => {
       </Link>
       <BannerImg>
         <DropShadow />
-        <img src={src} alt={alt} loading="lazy" />
+        <img src={src} alt={alt} loading="lazy" width={"100%"} />
       </BannerImg>
     </Stack>
   );
