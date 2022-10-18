@@ -145,6 +145,7 @@ export default function MenuDrawer({ children }: props) {
           </div>
           <a
             target={"_blank"}
+            rel="noreferrer"
             href="https://instagram.com/morecoffeebuca?igshid=YmMyMTA2M2Y="
           >
             <InstagramIcon />
