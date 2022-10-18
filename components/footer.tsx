@@ -6,7 +6,6 @@ type Props = {};
 const FooterBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  padding: theme.spacing(0, 1),
   backgroundColor: theme.palette.primary.main,
   color: "black",
   padding: "3px 6px",
