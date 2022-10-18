@@ -21,6 +21,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
 import { Stack } from "@mui/system";
+import { bgColor } from "../constants";
 
 const drawerWidth = 240;
 
@@ -108,7 +109,7 @@ export default function MenuDrawer({ children }: props) {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", minHeight: "calc(100vh - 23px)" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -125,30 +126,33 @@ export default function MenuDrawer({ children }: props) {
             <MenuIcon />
           </IconButton> */}
           <div style={{ flexGrow: 1 }}>
-            <Link href="/">
-              <a>
-                <Stack direction={"row"} alignItems="center">
-                  <div>
-                    <img src={"assets/more_coffee_logo.jpeg"} height="40" />
-                  </div>
-                  <Typography
-                    variant="h6"
-                    noWrap
-                    component="div"
-                    paddingLeft={1}
-                  >
-                    More Coffee
-                  </Typography>
-                </Stack>
-              </a>
-            </Link>
+            <div style={{ width: "min-content" }}>
+              <Link href="/">
+                <a>
+                  <Stack direction={"row"} alignItems="center">
+                    <div>
+                      <img src={"assets/more_coffee_logo.jpeg"} height="40" />
+                    </div>
+                    <Typography
+                      variant="h6"
+                      noWrap
+                      component="div"
+                      paddingLeft={1}
+                      color="black"
+                    >
+                      More Coffee
+                    </Typography>
+                  </Stack>
+                </a>
+              </Link>
+            </div>
           </div>
           <a
             target={"_blank"}
             rel="noreferrer"
             href="https://instagram.com/morecoffeebuca?igshid=YmMyMTA2M2Y="
           >
-            <InstagramIcon />
+            <InstagramIcon fontSize="large" />
           </a>
         </Toolbar>
       </AppBar>
@@ -213,7 +217,12 @@ export default function MenuDrawer({ children }: props) {
           ))}
         </List>
       </Drawer> */}
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box
+        component="main"
+        // backgroundColor="#051923"
+        style={{ backgroundColor: bgColor }}
+        sx={{ flexGrow: 1, p: 3 }}
+      >
         <DrawerHeader />
         {children}
       </Box>
