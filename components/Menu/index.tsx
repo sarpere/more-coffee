@@ -14,7 +14,7 @@ export default function Menu({ items }: { items: menuTypes.menuItem[] }) {
       }}
     >
       {items.map((item) => (
-        <Item item={item} />
+        <Item key={item.url} item={item} />
       ))}
     </Box>
   );

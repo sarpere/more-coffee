@@ -6,7 +6,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    primary: {
+      main: "#ffffff",
+    },
+    secondary: {
+      main: "#3c6e71",
+    },
   },
 });
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,10 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Layout>
-        <>
-          <Component {...pageProps} />
-          <div>Selam</div>
-        </>
+        <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
   );

@@ -3,3 +3,8 @@ export type menuItem = {
   image: string;
   url: string;
 };
+
+export type categoryList = {
+  name: string;
+  price: string;
+};

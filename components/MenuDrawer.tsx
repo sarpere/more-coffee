@@ -18,6 +18,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import Link from "next/link";
+import { Stack } from "@mui/system";
 
 const drawerWidth = 240;
 
@@ -109,7 +112,7 @@ export default function MenuDrawer({ children }: props) {
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -120,13 +123,35 @@ export default function MenuDrawer({ children }: props) {
             }}
           >
             <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-          </Typography>
+          </IconButton> */}
+          <div style={{ flexGrow: 1 }}>
+            <Link href="/">
+              <a>
+                <Stack direction={"row"} alignItems="center">
+                  <div>
+                    <img src={"assets/more_coffee_logo.jpeg"} height="40" />
+                  </div>
+                  <Typography
+                    variant="h6"
+                    noWrap
+                    component="div"
+                    paddingLeft={1}
+                  >
+                    More Coffee
+                  </Typography>
+                </Stack>
+              </a>
+            </Link>
+          </div>
+          <a
+            target={"_blank"}
+            href="https://instagram.com/morecoffeebuca?igshid=YmMyMTA2M2Y="
+          >
+            <InstagramIcon />
+          </a>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      {/* <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
@@ -186,7 +211,7 @@ export default function MenuDrawer({ children }: props) {
             </ListItem>
           ))}
         </List>
-      </Drawer>
+      </Drawer> */}
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         {children}

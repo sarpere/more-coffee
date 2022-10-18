@@ -1,4 +1,4 @@
-// import Footer from "./footer";
+import Footer from "./footer";
 import { ReactElement } from "react";
 import MenuDrawer from "./MenuDrawer";
 interface props {
@@ -8,7 +8,7 @@ export default function Layout({ children }: props) {
   return (
     <>
       <MenuDrawer>{children}</MenuDrawer>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

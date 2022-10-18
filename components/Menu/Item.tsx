@@ -71,6 +71,7 @@ const ImageMarked = styled("span")(({ theme }) => ({
 type Props = {};
 
 const Item = ({ item }: { item: menuTypes.menuItem }) => {
+  console.log(item.url);
   return (
     <ImageButton
       focusRipple
@@ -80,24 +81,26 @@ const Item = ({ item }: { item: menuTypes.menuItem }) => {
       }}
     >
       <Link href={item.url}>
-        <ImageSrc style={{ backgroundImage: `url(${item.image})` }} />
-        <ImageBackdrop className="MuiImageBackdrop-root" />
-        <Image>
-          <Typography
-            component="span"
-            variant="subtitle1"
-            color="inherit"
-            sx={{
-              position: "relative",
-              p: 4,
-              pt: 2,
-              pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-            }}
-          >
-            {item.name}
-            <ImageMarked className="MuiImageMarked-root" />
-          </Typography>
-        </Image>
+        <a>
+          <ImageSrc style={{ backgroundImage: `url(${item.image})` }} />
+          <ImageBackdrop className="MuiImageBackdrop-root" />
+          <Image>
+            <Typography
+              component="span"
+              variant="subtitle1"
+              color="inherit"
+              sx={{
+                position: "relative",
+                p: 4,
+                pt: 2,
+                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+              }}
+            >
+              {item.name}
+              <ImageMarked className="MuiImageMarked-root" />
+            </Typography>
+          </Image>
+        </a>
       </Link>
     </ImageButton>
   );
