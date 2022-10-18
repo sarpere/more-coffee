@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Grid } from "@mui/material";
+import Head from "../components/head";
 
 const darkTheme = createTheme({
   palette: {
@@ -57,6 +58,7 @@ const darkTheme = createTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={darkTheme}>
+      <Head />
       <CssBaseline />
       <Layout>
         <Grid container justifyContent="center">
